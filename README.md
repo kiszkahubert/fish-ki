@@ -1,1 +1,1 @@
-Flashcard web app that allowed learning for multiple exams at Lublin Medical University, once available at fish-ki.pl behind paywall. Made with Node.js + Express.js and PostgreSQL for storing data.
+Flashcard web app that allowed learning for multiple exams at Lublin Medical University, once available at fish-ki.pl behind paywall. Made with Node.js + Express.js and PostgreSQL for storing data. It has a valid parser from Anki .apkg file that allows to add flashcards directly to database without handling it manualy
