@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statystyki Kart</title>
+    <link rel="stylesheet" href="css/stats.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="header">
+        <h1>Statystyki</h1>
+        <p>Przejrzano dzisiaj <span id="cardsReviewed">0</span> kart</p>
+    </div>
+    <div class="deck-selection">
+        <label for="deck-select">Wybierz deck:</label>
+        <select id="deck-select"></select>
+    </div>
+    <div class="deck-chart">
+        <canvas id="deckPieChart"></canvas>
+    </div>
+    <div class="contact-message">
+        Masz problem ze stroną albo propozycje funkcji? Napisz do Szymona
+    </div>
+    <script src="js/stats.js"></script>
+</body>
+</html>

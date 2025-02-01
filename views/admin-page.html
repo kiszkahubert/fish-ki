@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="css/admin-page.css">
+</head>
+<body>
+    <div class="select-buttons">
+        <button class="l-corner">Create User</button>
+        <button>Add deck to User</button>
+        <button>Add deck</button>
+        <button>Add cards to a Deck</button>
+        <button class="r-corner">Upload Images</button>
+    </div>
+    <div class="selected-setting">
+        <div class="user-create active">
+            <form onsubmit="createNewUser(event)">
+                <label for="username">Enter username:</label>
+                <input type="text" name="username" id="username" required>
+                <label for="password">Enter user's password:</label>
+                <input type="text" name="password" id="password" required>
+                <input type="submit" value="Submit" class="save-settings">
+            </form>
+            <div id="successMessage" class="message success-message">User has been created</div>
+            <div id="errorMessage" class="message error-message"></div>
+        </div>
+
+        <div class="add-user-to-deck">
+            <div class="add-deck-form">
+                <label for="user-select">For user: </label>
+                <select id="user-select"></select>
+                <label for="deck-select-2">Grant access to deck:</label>
+                <select id="deck-select-2"></select>
+                <button onclick="addUserToDeck()" class="save-settings">Add Deck</button>
+            </div>
+        </div>
+
+        <div class="add-deck">
+            <div class="all-decks">
+                
+            </div>
+            <div class="add-deck-form">
+                <label for="parent-deck">Parent Deck:</label>
+                <select id="parent-deck"></select>
+                <label for="new-deck-name">New Deck Name:</label>
+                <input type="text" id="new-deck-name" required>
+                <button onclick="addNewDeck()" class="save-settings">Add Deck</button>
+            </div>
+        </div>
+
+        <div class="add-cards">
+            <form onsubmit="addCardsToDatabase(event)">
+                <label for="deck-select">Choose deck:</label>
+                <select id="deck-select" required></select>
+                <label for="cards-data">Choose *.txt file for deck:</label>
+                <input type="file" name="cards-data" id="cards-data" accept=".txt" required>
+                <input type="submit" value="Add to database" class="save-settings">
+            </form>
+            <div id="addCardsSuccessMessage" class="message success-message">Cards added successfully</div>
+            <div id="addCardsErrorMessage" class="message error-message"></div>
+        </div>
+
+        <div class="upload-images">
+            <form onsubmit="uploadImages(event)">
+                <label for="image-category">Choose deck:</label>
+                <select id="image-category" required></select>
+                <label for="image-files" class="file-label">Choose Image Files</label>
+                <input type="file" id="image-files" class="file-input" multiple accept="image/*" required>
+                <div id="selected-files"></div>
+                <input type="submit" value="Upload Images" class="save-settings">
+            </form>
+            <div id="uploadImagesSuccessMessage" class="message success-message">Images uploaded successfully</div>
+            <div id="uploadImagesErrorMessage" class="message error-message"></div>
+        </div>
+    </div>
+    <script src="js/admin-page.js"></script>
+</body>
+</html>

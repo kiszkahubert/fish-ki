@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcard App</title>
+    <link rel="stylesheet" href="css/review.css">
+</head>
+<body>
+    <div class="cards">
+        <div class="card-front"></div>
+        <div class="card-back"></div>
+    </div>
+    <div class="difficulties">
+        <div class="first-stage">
+            <div class="cards-left">
+                <span style="color: rgb(100, 186, 215);" id="newCards">0</span>
+                <span>+</span>
+                <span style="color: lightcoral;" id="learningCards">0</span>
+                <span>+</span>
+                <span style="color: greenyellow;" id="reviewingCards">0</span>
+            </div>
+            <button class="show-answer" tabindex="0">Pokaż odpowiedź</button>
+        </div>
+        <div class="second-stage" style="display: none;">
+            <div class="item">
+                <span>&lt;1min</span>
+                <button data-interval="1" tabindex="1">Powtórz</button>
+            </div>
+            <div class="item">
+                <span>&lt;6min</span>
+                <button data-interval="6" tabindex="2">Trudna</button>
+            </div>
+            <div class="item">
+                <span>&lt;10min</span>
+                <button data-interval="10" tabindex="3">Dobra</button>
+            </div>
+            <div class="item">
+                <span>4d</span>
+                <button data-interval="5760" tabindex="4">Łatwa</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/review.js"></script>
+</body>
+</html>

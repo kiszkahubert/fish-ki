@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Zaloguj się!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./favicon.png">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <div id="login-box">
+        <h2>Aby kontynuować, zaloguj się</h2>
+        <form id="loginForm" method="post" action="/login">
+            <div class="user-box">
+                <input type="text" name="username" id="username" required>
+                <label for="username">Nazwa użytkownika</label>
+            </div>
+            <div class="user-box">
+                <input type="password" name="password" id="password" required>
+                <label for="password">Hasło</label>
+            </div>
+            <div class="error-message" id="error-message" style="display: none;"><h5>Niepoprawna nazwa użytkownika lub hasło</h5></div>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+    <div class="terms-text">
+        <h5>Korzystając z serwisu akceptujesz wszystkie postanowienia zawarte w niniejszych <a id="open-popup">zasadach</a></h5>
+    </div>
+    <div class="overlay" id="popup-overlay"></div>
+    <div class="popup" id="popup">
+        <span class="close-btn" id="close-popup">&times;</span>
+        <h3>Zasady Korzystania i Zastrzeżenia Licencyjne</h3>
+        <p><strong>1) Zabronione Udostępnianie Konta</strong></p>
+        <p>Każdy użytkownik ma prawo do korzystania z konta wyłącznie we własnym zakresie. Udostępnianie danych logowania (w tym hasła) osobom trzecim jest surowo zabronione. W przypadku wykrycia nieautoryzowanego dostępu, konto użytkownika może zostać zablokowane lub usunięte bez wcześniejszego powiadomienia.</p>
+        <p><strong>2) Zakaz Pobierania i Udostępniania Treści</strong></p>
+        <p>Zawarte na stronie materiały, w tym fiszki, są chronione prawem autorskim i mogą być używane wyłącznie przez zarejestrowanych użytkowników do celów edukacyjnych. Zabrania się jakiegokolwiek pobierania, kopiowania, udostępniania, rozpowszechniania lub publikowania tych treści w jakiejkolwiek formie, bez wyraźnej pisemnej zgody właściciela strony. Jakiekolwiek naruszenie tych zasad może skutkować odpowiedzialnością prawną.</p>
+        <p><strong>3) Ochrona Własności Intelektualnej</strong></p>
+        <p>Wszystkie treści dostępne na stronie są własnością Huberta Kiszki oraz Szymona Flisa i są chronione prawami autorskimi. Wszelkie próby naruszenia tych praw, w tym kopiowanie, reprodukowanie lub publikowanie materiałów, mogą prowadzić do podjęcia odpowiednich kroków prawnych.</p>
+        <p><strong>4) Konsekwencje Naruszenia Regulaminu</strong></p>
+        <p>W przypadku naruszenia któregokolwiek z powyższych postanowień, Hubert Kiszka oraz Szymon Flis zastrzegają sobie prawo do natychmiastowego zawieszenia lub usunięcia konta użytkownika bez zwrotu kosztów subskrypcji (jeśli dotyczy), a także do podjęcia działań prawnych w celu dochodzenia swoich praw.</p>
+    </div>
+    <script src="js/login.js"></script>
+</body>
+</html>
